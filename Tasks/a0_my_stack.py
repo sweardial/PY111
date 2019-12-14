@@ -1,7 +1,9 @@
 """
 My little Stack
 """
-from typing import Any
+from typing import Any, List
+
+_stack: List = []
 
 
 def push(elem: Any) -> None:
@@ -11,8 +13,8 @@ def push(elem: Any) -> None:
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
-	print(elem)
-	return None
+	_stack.append(elem)
+
 
 
 def pop() -> Any:
@@ -21,7 +23,7 @@ def pop() -> Any:
 
 	:return: popped element
 	"""
-	return None
+	return _stack.pop()
 
 
 def peek(ind: int = 0) -> Any:
