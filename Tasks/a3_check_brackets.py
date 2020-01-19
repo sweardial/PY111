@@ -6,7 +6,6 @@ def check_brackets(brackets_row: str) -> bool:
 	string = brackets_row
 	if len(string)% 2 != 0:
 		return False
-
 	for i in string:
 		if i == '(':
 			stack.append(i)
@@ -17,6 +16,23 @@ def check_brackets(brackets_row: str) -> bool:
 	else:
 		return True
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(check_brackets(''))
 
 
 
