@@ -10,5 +10,6 @@ def dfs(g: nx.Graph, start_node: Hashable) -> List[Hashable]:
 	:param start_node: starting node of search
 	:return: list of nodes in the visited order
 	"""
+
 	print(g, start_node)
 	return list(g.nodes)

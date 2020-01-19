@@ -10,5 +10,9 @@ def bfs(g: nx.Graph, start_node: Hashable) -> List[Hashable]:
 	:param start_node: starting node for search
 	:return: list of nodes in the visited order
 	"""
+	nodes = []
+	nodes.append(g.neighbors(start_node))
+
+
 	print(g, start_node)
 	return list(g.nodes)

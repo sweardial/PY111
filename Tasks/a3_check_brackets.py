@@ -1,9 +1,23 @@
-def check_brackets(brackets_row: str) -> bool:
-	"""
-	Check whether input string is a valid bracket sequence
-	Valid examples: "", "()", "()()(()())", invalid: "(", ")", ")("
-	:param brackets_row: input string to be checked
-	:return: True if valid, False otherwise
-	"""
 
-	return False
+string = ""
+
+def check_brackets(brackets_row: str) -> bool:
+	stack = []
+	string = brackets_row
+	if len(string)% 2 != 0:
+		return False
+
+	for i in string:
+		if i == '(':
+			stack.append(i)
+		if i == ')':
+			stack.pop()
+	if stack:
+		return False
+	else:
+		return True
+
+
+
+
+

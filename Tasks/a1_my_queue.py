@@ -1,27 +1,37 @@
 """
 My little Queue
 """
-from typing import Any
+from typing import Any, List
 
+import queue
+
+
+_queue: List = []
 
 def enqueue(elem: Any) -> None:
+	_queue.append(elem)
+
+
 	"""
 	Operation that add element to the end of the queue
 
 	:param elem: element to be added
 	:return: Nothing
 	"""
-	print(elem)
-	return None
+
 
 
 def dequeue() -> Any:
+	if _queue:
+		return _queue.pop(0)
+
+
 	"""
 	Return element from the beginning of the queue. Should return None if no elements.
 
 	:return: dequeued element
 	"""
-	return None
+
 
 
 def peek(ind: int = 0) -> Any:
@@ -31,9 +41,8 @@ def peek(ind: int = 0) -> Any:
 	:param ind: index of element (count from the beginning)
 	:return: peeked element
 	"""
-	print(ind)
-	return None
-
+	if ind in range(len(_queue)):
+		return _queue[ind]
 
 def clear() -> None:
 	"""
@@ -41,4 +50,7 @@ def clear() -> None:
 
 	:return: None
 	"""
-	return None
+	if _queue:
+		_queue.clear()
+
+
